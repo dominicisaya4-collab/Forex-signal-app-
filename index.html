@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forex Signals</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background: #1d293b;
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+    h1 { color: #38d9a9; }
+    .price { font-size: 28px; font-weight: bold; }
+    button {
+      padding: 14px;
+      border: 0;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      width: 48%;
+    }
+    .buy { background: #159957; }
+    .sell { background: #dc3545; }
+    .note { color: #bdc7d8; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Forex Signals</h1>
+  <p>Your trading dashboard</p>
+
+  <div class="card">
+    <h2>XAUUSD — Gold</h2>
+    <p class="price" id="price">Waiting for market data</p>
+    <p id="signal">No live signal connected yet</p>
+    <button class="buy" onclick="showSignal('BUY')">BUY</button>
+    <button class="sell" onclick="showSignal('SELL')">SELL</button>
+  </div>
+
+  <div class="card">
+    <h3>Market Chart</h3>
+    <p>Live chart connection will be added next.</p>
+  </div>
+
+  <p class="note">
+    Educational demo only. Buttons do not place trades.
+    Prices and signals are not live. Trading involves risk.
+  </p>
+
+  <script>
+    function showSignal(type) {
+      document.getElementById("signal").textContent =
+        "Demo selection: " + type +
+        ". This is not a verified trading signal.";
+    }
+  </script>
+</body>
+</html>
